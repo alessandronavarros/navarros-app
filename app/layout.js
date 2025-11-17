@@ -1,3 +1,5 @@
+import '../styles/globals.css';
+
 export const metadata = {
   title: 'Navarros Consultoria - App',
   description: 'Painel Navarros Consultoria',
@@ -42,7 +44,10 @@ export default function RootLayout({ children }) {
             <div style={{ fontSize: 12, color: '#c5c6c7' }}>Painel de Gestão</div>
           </div>
         </header>
-        <main style={{ padding: '24px 32px', minHeight: 'calc(100vh - 64px)' }}>{children}</main>
+
+        <main style={{ padding: '24px 32px', minHeight: 'calc(100vh - 64px)' }}>
+          {children}
+        </main>
       </body>
     </html>
   );
