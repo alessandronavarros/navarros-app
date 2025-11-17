@@ -1,0 +1,405 @@
+/* Reset básico */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background: #0b1220;
+  color: #e5e7eb;
+}
+
+/* Layout geral */
+.app-shell {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 260px;
+  background: radial-gradient(circle at top left, #1d4ed8, #020617);
+  padding: 24px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  box-shadow: 4px 0 20px rgba(0, 0, 0, 0.4);
+}
+
+.sidebar-logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.sidebar-logo-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  border: 1px solid #60a5fa;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  color: #60a5fa;
+}
+
+.sidebar-logo-text-main {
+  font-weight: 700;
+  letter-spacing: 0.08em;
+}
+
+.sidebar-logo-text-sub {
+  font-size: 11px;
+  text-transform: uppercase;
+  color: #9ca3af;
+  letter-spacing: 0.3em;
+}
+
+.sidebar-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.sidebar-nav-section-title {
+  font-size: 11px;
+  text-transform: uppercase;
+  color: #9ca3af;
+  letter-spacing: 0.16em;
+  margin-bottom: 4px;
+}
+
+.sidebar-nav-item {
+  padding: 8px 10px;
+  border-radius: 8px;
+  font-size: 14px;
+  color: #e5e7eb;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.sidebar-nav-item.active {
+  background: linear-gradient(to right, #2563eb, #22c55e);
+}
+
+.sidebar-nav-item span {
+  font-size: 13px;
+}
+
+/* Main */
+.main-area {
+  flex: 1;
+  padding: 20px 26px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+/* Topbar */
+.topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.topbar-title-block {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.topbar-title {
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.topbar-subtitle {
+  font-size: 13px;
+  color: #9ca3af;
+}
+
+.topbar-user {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.topbar-user-initials {
+  width: 32px;
+  height: 32px;
+  border-radius: 999px;
+  background: #1f2937;
+  border: 1px solid #4b5563;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+}
+
+.topbar-user-info {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  text-align: right;
+}
+
+.topbar-user-name {
+  font-size: 13px;
+}
+
+.topbar-user-role {
+  font-size: 11px;
+  color: #9ca3af;
+}
+
+.button-small {
+  border: 1px solid #4b5563;
+  border-radius: 999px;
+  padding: 6px 10px;
+  background: transparent;
+  color: #e5e7eb;
+  font-size: 11px;
+  cursor: pointer;
+}
+
+.button-small:hover {
+  background: #111827;
+}
+
+/* Cards métricas */
+.kpi-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 12px;
+}
+
+.kpi-card {
+  background: radial-gradient(circle at top left, #1e293b, #020617);
+  border-radius: 14px;
+  padding: 14px 16px;
+  border: 1px solid #111827;
+  box-shadow: 0 14px 30px rgba(15, 23, 42, 0.8);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.kpi-label {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  color: #9ca3af;
+}
+
+.kpi-value {
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.kpi-footer {
+  font-size: 11px;
+  color: #6b7280;
+}
+
+/* Linhas / colunas do dashboard */
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: 2fr 1.5fr;
+  gap: 14px;
+}
+
+.card-panel {
+  background: #020617;
+  border-radius: 16px;
+  border: 1px solid #111827;
+  box-shadow: 0 10px 26px rgba(15, 23, 42, 0.9);
+  padding: 16px 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.card-panel-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.card-panel-title {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.card-panel-subtitle {
+  font-size: 11px;
+  color: #9ca3af;
+}
+
+/* Tabela simples */
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 12px;
+}
+
+.table th,
+.table td {
+  padding: 6px 4px;
+  border-bottom: 1px solid #111827;
+}
+
+.table th {
+  text-align: left;
+  color: #9ca3af;
+  font-weight: 500;
+}
+
+.table tr:hover td {
+  background: #020617;
+}
+
+/* Login */
+.login-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: radial-gradient(circle at top, #1d4ed8, #020617 55%);
+}
+
+.login-card {
+  width: 360px;
+  background: #020617;
+  border-radius: 16px;
+  border: 1px solid #111827;
+  box-shadow: 0 18px 45px rgba(15, 23, 42, 0.95);
+  padding: 24px 26px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.login-logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.login-logo-mark {
+  width: 38px;
+  height: 38px;
+  border-radius: 12px;
+  border: 1px solid #60a5fa;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  color: #60a5fa;
+}
+
+.login-logo-texts {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.login-logo-main {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.login-logo-sub {
+  font-size: 10px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #9ca3af;
+}
+
+.login-title {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.login-subtitle {
+  font-size: 12px;
+  color: #9ca3af;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.input-label {
+  font-size: 12px;
+  color: #d1d5db;
+}
+
+.input-field {
+  width: 100%;
+  padding: 8px 9px;
+  border-radius: 10px;
+  border: 1px solid #111827;
+  background: #020617;
+  color: #e5e7eb;
+  font-size: 13px;
+}
+
+.input-field:focus {
+  outline: none;
+  border-color: #2563eb;
+}
+
+.login-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.button-primary {
+  width: 100%;
+  padding: 9px 10px;
+  border-radius: 999px;
+  border: none;
+  background: linear-gradient(to right, #2563eb, #22c55e);
+  color: white;
+  font-weight: 500;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.button-primary:hover {
+  filter: brightness(1.05);
+}
+
+.button-ghost {
+  width: 100%;
+  padding: 9px 10px;
+  border-radius: 999px;
+  border: 1px solid #4b5563;
+  background: transparent;
+  color: #e5e7eb;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.button-ghost:hover {
+  background: #020617;
+}
+
+.login-footer {
+  font-size: 11px;
+  text-align: center;
+  color: #6b7280;
+}
+
+.login-error {
+  font-size: 11px;
+  color: #f97316;
+}
